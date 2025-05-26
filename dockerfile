@@ -1,4 +1,4 @@
-FROM python:3.10-slim
+FROM python:3.13-slim
 
 # Instala dependências de MoviePy e FFmpeg
 RUN apt-get update && apt-get install -y ffmpeg libxext6 libxrender1 libglib2.0-0 libsm6 libx11-6
