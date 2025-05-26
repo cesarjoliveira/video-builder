@@ -1,4 +1,4 @@
-FROM runpod/pytorch:3.10-py3.10
+FROM pytorch/pytorch:2.2.0-cuda11.8-cudnn8-runtime
 
 WORKDIR /app
 
