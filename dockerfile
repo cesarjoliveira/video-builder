@@ -1,9 +1,11 @@
-FROM pytorch/pytorch:2.2.0-cuda11.8-cudnn8-runtime
+FROM python:3.10-slim
 
 WORKDIR /app
 
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install torch torchvision torchaudio && apt-get update && apt-get install -y ffmpeg
+
 
 COPY . .
 
